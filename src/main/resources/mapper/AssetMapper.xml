@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator_example.demo.dao.AssetMapper">
+  <resultMap id="BaseResultMap" type="com.generator_example.demo.model.asset.Asset">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="recod_date" jdbcType="DATE" property="recodDate" />
+    <result column="alipay" jdbcType="REAL" property="alipay" />
+    <result column="tenpay" jdbcType="REAL" property="tenpay" />
+    <result column="ceb" jdbcType="REAL" property="ceb" />
+    <result column="zjrc" jdbcType="REAL" property="zjrc" />
+    <result column="other_bank" jdbcType="REAL" property="otherBank" />
+    <result column="current" jdbcType="REAL" property="current" />
+    <result column="dad_money" jdbcType="REAL" property="dadMoney" />
+    <result column="cash" jdbcType="REAL" property="cash" />
+    <result column="others" jdbcType="REAL" property="others" />
+  </resultMap>
+</mapper>

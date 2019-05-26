@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator_example.demo.dao.ExpenseMapper">
+  <resultMap id="BaseResultMap" type="com.generator_example.demo.model.expense.Expense">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="month" jdbcType="DATE" property="month" />
+    <result column="total_pay" jdbcType="REAL" property="totalPay" />
+    <result column="from_who" jdbcType="VARCHAR" property="fromWho" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="traffic_pay" jdbcType="REAL" property="trafficPay" />
+    <result column="traffic_info" jdbcType="VARCHAR" property="trafficInfo" />
+  </resultMap>
+</mapper>
