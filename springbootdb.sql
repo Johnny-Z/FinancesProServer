@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-05-23 20:45:32
+Date: 2019-05-26 10:16:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `asset`;
 CREATE TABLE `asset` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `recod_date` date NOT NULL COMMENT '记录日期',
   `alipay` float(10,2) unsigned DEFAULT NULL COMMENT '支付宝',
   `tenpay` float(10,2) unsigned DEFAULT NULL COMMENT '腾讯理财通',
@@ -44,14 +44,14 @@ CREATE TABLE `asset` (
 DROP TABLE IF EXISTS `expense`;
 CREATE TABLE `expense` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `month` datetime(6) NOT NULL COMMENT '月份',
+  `month` date NOT NULL COMMENT '月份',
   `total_pay` float(10,2) unsigned DEFAULT NULL COMMENT '花销额',
-  `from` varchar(25) DEFAULT NULL COMMENT '谁的花销',
+  `from_who` varchar(25) DEFAULT NULL COMMENT '谁的花销',
   `info` varchar(255) DEFAULT NULL COMMENT '备注信息',
   `traffic_pay` float(10,2) unsigned DEFAULT NULL COMMENT '交通花费',
   `traffic_info` varchar(255) DEFAULT NULL COMMENT '交通备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of expense
@@ -72,7 +72,7 @@ CREATE TABLE `money_management` (
   `belong` varchar(10) NOT NULL COMMENT '财主',
   `interest` float(10,2) unsigned DEFAULT NULL COMMENT '到期利息',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of money_management
