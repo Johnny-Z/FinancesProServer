@@ -57,4 +57,10 @@ public class ExpenseController {
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }
+
+    @PostMapping("/selectByFromWho")
+    public Result selectByFromWho(@RequestParam @NotNull String fromWho) {
+        Expense expense = expenseService.selectByFromWho(fromWho);
+        return ResultGenerator.genSuccessResult(expense);
+    }
 }

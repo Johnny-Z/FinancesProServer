@@ -21,4 +21,7 @@ public class ExpenseServiceImpl extends AbstractService<Expense> implements Expe
     @Resource
     private ExpenseMapper expenseMapper;
 
+    public Expense selectByFromWho(String fromWho){
+        return expenseMapper.selectByFromWho(fromWho);
+    }
 }

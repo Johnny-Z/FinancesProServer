@@ -8,5 +8,5 @@ import com.generator_example.demo.core.Service;
 * @date 2019/05/26.
 */
 public interface ExpenseService extends Service<Expense> {
-
+    Expense selectByFromWho(String fromWho);
 }
